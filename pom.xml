@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.0</version>
+		<version>4.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tec.jvgualdi</groupId>
@@ -27,8 +27,8 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
-		<spring-cloud.version>2025.0.0</spring-cloud.version>
+		<java.version>25</java.version>
+		<spring-cloud.version>2025.1.2</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -69,17 +69,21 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- Eureka Client -->
+		<!-- Eureka Client (desativado - testando o serviço isolado, sem discovery) -->
+		<!--
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		-->
 
-		<!-- AMQP -->
+		<!-- AMQP (desativado - testando o serviço isolado) -->
+		<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
+		-->
 
 		<!-- Tests -->
 		<dependency>
@@ -87,11 +91,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
